@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+	<title>简化的页码导航</title>
+
+<link rel="stylesheet" href="http://style.aliunicorn.com/css/6v/apollo/core/core-ws.css?t=0_0" />
+<link rel="stylesheet" href="http://style.aliunicorn.com/css/6v/apollo/mod/pagination/pagination-ws.css?t=0_0" />
+<style>
+body{margin:10px 15px;}
+</style>
+<!-- CODE START css
+#requireCSS("6v/apollo/mod/pagination/pagination-ws.css")
+CODE END -->
+</head>
+<body>
+
+第一页:
+
+<!-- CODE START html 共 100 页，当前第 1 页。 -->
+<div class="ui-pagination ui-pagination-pager util-clearfix">
+	<span class="ui-pagination-prev ui-pagination-disabled">previous</span>
+	<a href="#" class="ui-pagination-next">next</a>
+	<label class="ui-label">
+		1 of 100 Page
+	</label>
+</div>
+<!-- CODE END -->
+
+最后一页:
+
+<div class="ui-pagination ui-pagination-pager util-clearfix">
+	<a href="#" class="ui-pagination-prev">previous</a>
+	<span class="ui-pagination-next ui-pagination-disabled">next</span>
+	<label class="ui-label">
+		100 of 100 Page
+	</label>
+</div>
+
+其他:
+
+<div class="ui-pagination ui-pagination-pager util-clearfix">
+	<span href="#" class="ui-pagination-prev ui-pagination-disabled">previous</span>
+	<span href="#" class="ui-pagination-next ui-pagination-disabled">next</span>
+	<label class="ui-label">
+		12 of 100 Page
+	</label>
+</div>
+
+</body>
+</html>

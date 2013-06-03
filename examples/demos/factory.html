@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+	<title>构造页码导航</title>
+
+<link rel="stylesheet" href="http://style.aliunicorn.com/css/6v/apollo/core/core-ws.css?t=0_0" />
+<link rel="stylesheet" href="http://style.aliunicorn.com/css/6v/apollo/mod/pagination/pagination-ws.css?t=0_0" />
+<style>
+body{margin:10px 15px;}
+</style>
+<!-- CODE START css
+#requireCSS("6v/apollo/mod/pagination/pagination-ws.css")
+CODE END -->
+
+	<script src="http://style.aliunicorn.com/js/6v/atom/atom-ws.js?t=0_0"></script>
+	<!--[if lt IE 9]>
+	<script src="../static/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+<body>
+
+<div id="something-wrap"></div>
+
+<script>
+<!-- CODE START javascript 某区域内容共 100 页，每次切换时替换当前内容和页码导航。 -->
+seajs.use(['$', 'js/6v/lib/icbu/pagination/pagination-creator.js?t=0_0'], function($, PaginationCreator) {
+	var refreshPage = function(current, total) {
+		// 区块
+		var wrap = $('#something-wrap');
+
+		// 内容
+		var content = $('<div>这是第 ' + current + ' 页的内容</div>');
+
+		// 页码导航
+		var pagination = PaginationCreator.factory({
+			current: current,
+			total: total,
+			onTurn: function(to, _self) {
+				var total = _self.get('total');
+				refreshPage(to, total);
+			}
+		});
+
+		// 清空区块内容
+		wrap.html('');
+
+		// 将内容和页码导航添加到区块中
+		wrap.append(content);
+		wrap.append(pagination);
+	};
+
+	refreshPage(1, 100);
+});
+<!-- CODE END -->
+</script>
+
+</body>
+</html>

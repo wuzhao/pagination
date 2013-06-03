@@ -1,0 +1,25 @@
+{
+    "name": "pagination",
+    "version": "1.0.5",
+    "root": "icbu",
+    "description": "加工处理翻页区块事件，对页码点击和表单翻页事件进行处理。",
+    "homepage": "",
+    "author": "吴钊，连沁(36919)",
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "bugs": {
+        "url": "https://github.com/atom-js/pagination/issues/new"
+    },
+    "license": "",
+    "dependencies": {
+        "$": "$",
+        "base": "arale/base/base",
+        "widget": "arale/widget/widget"
+    },
+    "tests": ["pagination"],
+    "output": {
+        "pagination.js": "."
+    }
+}
