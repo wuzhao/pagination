@@ -4,7 +4,7 @@
 
 加工处理页码导航区块事件，对页码点击和表单翻页事件进行处理。运行于 [AraleJS](https://github.com/aralejs) 框架。
 
-[API 文档](http://arale.alizoo.com/pagination/) | [Demo 示例](http://arale.alizoo.com/pagination/examples/)
+[Demo 示例](http://arale.alizoo.com/pagination/examples/)
 
 ----
 
